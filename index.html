@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Library | Jade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .perspective-2000 { perspective: 2000px; }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .reveal { opacity: 0; }
+        .reveal.active { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(226, 232, 240, 0.8); }
+        .hidden { display: none; }
+    </style>
+</head>
+<body class="bg-[#F8FAFC] text-slate-900 overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-40 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white">
+                    <i data-lucide="library" class="w-5 h-5"></i>
+                </div>
+                <span class="text-lg font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600">AI Learning Library</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-bold text-slate-600">
+                <a href="#prompts" class="hover:text-indigo-600 transition-colors">Prompts</a>
+                <a href="#tools" class="hover:text-indigo-600 transition-colors">Tools</a>
+                <a href="#podcasts" class="hover:text-indigo-600 transition-colors">Podcasts</a>
+                <a href="#footer" class="px-5 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-200 transition-all text-xs">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-white border border-slate-200 rounded-full shadow-lg flex items-center justify-center text-slate-500 hover:text-indigo-600 hover:border-indigo-200 hover:shadow-xl transition-all z-50 opacity-0 invisible translate-y-4">
+        <i data-lucide="arrow-up" class="w-6 h-6"></i>
+    </button>
+
+    <div class="fixed inset-0 -z-10">
+        <div class="absolute top-[-5%] right-[-5%] w-[500px] h-[500px] bg-indigo-100/40 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[-5%] left-[-5%] w-[600px] h-[600px] bg-violet-100/30 rounded-full blur-[120px]"></div>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-6 pt-48 pb-20">
+        
+        <section class="grid lg:grid-cols-2 gap-16 items-center mb-40">
+            <div class="reveal active space-y-10">
+                <div class="space-y-6">
+                    <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Nice to meet you! I'm <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600">Jade</span>
+                    </h1>
+                    <p class="text-xl text-slate-500 font-medium max-w-lg leading-relaxed border-l-4 border-indigo-100 pl-6">
+                        An AI practitioner passionate about exploring applications. Here I share prompts, premium tools, and resources to record my AI journey.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-5 py-2.5 bg-white border border-slate-200 rounded-full text-sm font-bold text-slate-600 shadow-sm hover:border-indigo-200 transition-colors">AI Pragmatism</span>
+                    <span class="px-5 py-2.5 bg-white border border-slate-200 rounded-full text-sm font-bold text-slate-600 shadow-sm hover:border-indigo-200 transition-colors">Ex-Big Tech Strategy</span>
+                    <span class="px-5 py-2.5 bg-white border border-slate-200 rounded-full text-sm font-bold text-slate-600 shadow-sm hover:border-indigo-200 transition-colors">Lifelong Learner</span>
+                </div>
+            </div>
+            
+            <div class="reveal active delay-2 relative perspective-2000 flex justify-center lg:justify-end">
+                <div class="relative transform rotate-x-[4deg] rotate-y-[-10deg] hover:rotate-y-[-4deg] transition-all duration-700 ease-out">
+                    <div class="absolute inset-0 bg-indigo-500 rounded-2xl blur-3xl opacity-10"></div>
+                    <img src="https://i.postimg.cc/tJYYBm5K/IMG-2266.jpg" alt="Profile" class="relative rounded-2xl shadow-2xl border-[8px] border-white w-full max-w-[550px] aspect-[4/3] object-cover">
+                </div>
+            </div>
+        </section>
+
+        <section id="prompts" class="mb-32 scroll-mt-20">
+            <div class="reveal flex items-center gap-6 mb-12">
+                <h2 class="text-3xl font-extrabold whitespace-nowrap">Featured Prompts</h2>
+                <div class="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent"></div>
+            </div>
+
+            <div class="reveal delay-1 flex gap-2 p-1.5 bg-slate-200/50 w-fit rounded-2xl mb-10">
+                <button onclick="switchTab('templates')" id="tab-templates" class="px-8 py-2.5 rounded-xl font-bold transition-all bg-white text-indigo-600 shadow-sm">Templates</button>
+                <button onclick="switchTab('websites')" id="tab-websites" class="px-8 py-2.5 rounded-xl font-bold transition-all text-slate-500 hover:text-slate-700">Websites</button>
+            </div>
+
+            <div id="content-templates" class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal delay-2">
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Experience Organizer</h3>
+                        <p class="text-slate-500 text-sm mb-8 leading-relaxed">Based on STAR framework to organize work experiences and extract core contributions.</p>
+                    </div>
+                    <button onclick="openModal('Experience Organizer')" class="w-full py-3 bg-slate-900 text-white rounded-xl flex items-center justify-center gap-2 font-bold hover:bg-indigo-600 transition-all text-sm">View Details <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Resume Expert</h3>
+                        <p class="text-slate-500 text-sm mb-8 leading-relaxed">A senior expert perspective to optimize resume attraction with quantified results.</p>
+                    </div>
+                    <button onclick="openModal('Resume Expert')" class="w-full py-3 bg-slate-900 text-white rounded-xl flex items-center justify-center gap-2 font-bold hover:bg-indigo-600 transition-all text-sm">View Details <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                </div>
+            </div>
+
+            <div id="content-websites" class="grid grid-cols-1 md:grid-cols-3 gap-8 hidden">
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Design Prompts</h3>
+                        <p class="text-slate-500 text-sm mb-8 leading-relaxed">Web design style optimization, inspiring visual creation.</p>
+                    </div>
+                    <a href="https://www.designprompts.dev/" target="_blank" class="w-full py-3 bg-slate-900 text-white rounded-xl flex items-center justify-center gap-2 font-bold hover:bg-indigo-600 transition-all text-sm">Visit Site <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools" class="mb-40 scroll-mt-20">
+            <div class="reveal flex items-center gap-6 mb-12">
+                <h2 class="text-3xl font-extrabold whitespace-nowrap">Daily Tools</h2>
+                <div class="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <script>
+                    const tools = [
+                        {name: "Gemini", desc: "Google's versatile AI, a powerful multi-modal assistant.", url: "https://gemini.google.com/"},
+                        {name: "Claude", desc: "Natural writing, the most human-like AI companion.", url: "https://claude.ai/"},
+                        {name: "Qwen", desc: "Alibaba's LLM with strong Chinese & coding logic.", url: "https://tongyi.aliyun.com/"},
+                        {name: "Doubao", desc: "By ByteDance, smooth voice conversations and interactions.", url: "https://www.doubao.com/"},
+                        {name: "Notebook LM", desc: "Personal knowledge base, perfect for research analysis.", url: "https://notebooklm.google.com/"},
+                        {name: "Diandian", desc: "Precise answers based on massive Xiaohongshu notes.", url: "https://apps.apple.com/cn/app/%E7%82%B9%E7%82%B9/id6529536122"},
+                        {name: "Yuanzhou", desc: "AI-driven travel planning for a smarter experience.", url: "https://www.pitravel.cn/index.html"},
+                        {name: "Coze", desc: "Low-code platform to build your own AI bots easily.", url: "https://www.coze.com/"}
+                    ];
+                    tools.forEach((t, i) => {
+                        document.write(`
+                            <div class="reveal bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all delay-${(i%3)+1}">
+                                <div class="w-12 h-12 mb-4 bg-indigo-50 rounded-xl flex items-center justify-center font-bold text-indigo-600">${t.name[0]}</div>
+                                <h3 class="font-bold text-lg mb-1">${t.name}</h3>
+                                <p class="text-xs text-slate-500 mb-6 leading-relaxed">${t.desc}</p>
+                                <a href="${t.url}" target="_blank" class="text-indigo-600 text-sm font-bold flex items-center gap-1 hover:underline">Official Site <i data-lucide="chevron-right" class="w-3 h-3"></i></a>
+                            </div>
+                        `);
+                    });
+                </script>
+            </div>
+        </section>
+
+        <section id="podcasts" class="mb-40 scroll-mt-20">
+            <div class="reveal flex items-center gap-6 mb-12">
+                <h2 class="text-3xl font-extrabold whitespace-nowrap">Favorite Podcasts</h2>
+                <div class="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent"></div>
+            </div>
+
+            <div class="reveal delay-1 flex gap-2 p-1.5 bg-slate-200/50 w-fit rounded-2xl mb-10">
+                <button onclick="switchPodcastTab('xiaoyuzhou')" id="tab-xiaoyuzhou" class="px-8 py-2.5 rounded-xl font-bold transition-all bg-white text-indigo-600 shadow-sm">Xiaoyuzhou</button>
+                <button onclick="switchPodcastTab('youtube')" id="tab-youtube" class="px-8 py-2.5 rounded-xl font-bold transition-all text-slate-500 hover:text-slate-700">YouTube</button>
+            </div>
+
+            <div id="content-xiaoyuzhou" class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal delay-2">
+                <script>
+                    const podcasts = [
+                        {name: "声动早咖啡", desc: "Business & tech insights for your morning routine.", img: "https://i.postimg.cc/qzwwdXDf/IMG-5193.jpg"},
+                        {name: "张小珺商业访谈录", desc: "Conversations with leaders on business logic.", img: "https://i.postimg.cc/N5DDw7CQ/IMG-5194.jpg"},
+                        {name: "硅谷101", desc: "Connecting globally with tech frontiers.", img: "https://i.postimg.cc/kBssdFYJ/IMG-5195.jpg"},
+                        {name: "科技早知道", desc: "Predicting trends and tech opportunities.", img: "https://i.postimg.cc/vchhdL28/IMG-5196.jpg"},
+                        {name: "十字路口", desc: "Humanity and technology in the AI era.", img: "https://i.postimg.cc/ppCCtYcX/IMG-5197.jpg"},
+                        {name: "42章经", desc: "Deconstructing business via investment lens.", img: "https://i.postimg.cc/ZWqcYBXZ/IMG-5198.jpg"},
+                        {name: "信号与噪声", desc: "A podcast produced by Oasis Capital.", img: "https://i.postimg.cc/w1BVxyn9/IMG-5199.jpg"}
+                    ];
+                    podcasts.forEach((p, i) => {
+                        document.write(`
+                            <div class="flex items-center gap-5 bg-white p-5 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-all">
+                                <img src="${p.img}" class="w-20 h-20 rounded-2xl object-cover shadow-sm shrink-0" />
+                                <div class="overflow-hidden">
+                                    <h3 class="font-bold text-lg mb-1 truncate">${p.name}</h3>
+                                    <p class="text-sm text-slate-500 line-clamp-2 leading-snug">${p.desc}</p>
+                                </div>
+                            </div>
+                        `);
+                    });
+                </script>
+            </div>
+
+            <div id="content-youtube" class="grid grid-cols-1 md:grid-cols-3 gap-6 hidden reveal">
+                <script>
+                    const ytPodcasts = [
+                        {name: "No Priors: AI, ML, Tech, & Startups", desc: "Sarah Guo & Elad Gil talk with AI leaders.", url: "https://www.youtube.com/playlist?list=PLMKa0PxGwad7jf8hwwX8w5FHitXZ1L_h1"},
+                        {name: "Google DeepMind: The Podcast", desc: "Hosted by Hannah Fry, exploring AI breakthroughs.", url: "https://www.youtube.com/playlist?list=PLqYmG7hTraZBiUr6_Qf8YTS2Oqy3OGZEj"},
+                        {name: "Lenny's Podcast", desc: "Interviews with top product & growth experts.", url: "https://www.youtube.com/playlist?list=PL2fLjt2dG0N6unOOF3nHWYGcJJIQR1NKm"}
+                    ];
+                    ytPodcasts.forEach((p, i) => {
+                        document.write(`
+                            <a href="${p.url}" target="_blank" class="flex flex-col justify-between bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                                <div>
+                                    <div class="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center text-red-600 mb-4">
+                                        <i data-lucide="youtube" class="w-6 h-6"></i>
+                                    </div>
+                                    <h3 class="font-bold text-lg mb-2 leading-tight">${p.name}</h3>
+                                    <p class="text-sm text-slate-500 leading-snug mb-4">${p.desc}</p>
+                                </div>
+                                <div class="text-indigo-600 font-bold text-xs flex items-center gap-1">Go to Playlist <i data-lucide="external-link" class="w-3 h-3"></i></div>
+                            </a>
+                        `);
+                    });
+                </script>
+            </div>
+        </section>
+
+        <footer id="footer" class="reveal text-center py-20 border-t border-slate-200 scroll-mt-20">
+            <h2 class="text-2xl font-bold mb-4">Open to Communication & Collaboration</h2>
+            <a href="mailto:wenyu4165@gmail.com" class="inline-flex items-center gap-2 text-indigo-600 font-extrabold text-xl hover:text-violet-600 transition-colors">
+                <i data-lucide="mail"></i> wenyu4165@gmail.com
+            </a>
+            <p class="mt-8 text-slate-400 text-sm">© 2026 AI Learning Library | Jade</p>
+        </footer>
+    </main>
+
+    <div id="modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden flex items-center justify-center p-6">
+        <div class="bg-white rounded-[32px] w-full max-w-2xl max-h-[85vh] overflow-hidden shadow-2xl flex flex-col scale-95 transition-transform duration-300" id="modal-content">
+            <div class="p-8 border-b flex justify-between items-center bg-white z-10">
+                <div>
+                    <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-1 block">Prompt Template</span>
+                    <h3 id="modal-title" class="text-2xl font-bold text-slate-900">Title</h3>
+                </div>
+                <button onclick="closeModal()" class="w-10 h-10 flex items-center justify-center hover:bg-slate-100 rounded-full transition-colors"><i data-lucide="x" class="w-6 h-6"></i></button>
+            </div>
+            <div class="p-8 overflow-y-auto bg-slate-50/50 flex-1 custom-scrollbar" id="modal-body">
+                <div class="prose prose-slate max-w-none">
+                    <pre id="modal-text" class="whitespace-pre-wrap font-mono text-sm leading-relaxed text-slate-600"></pre>
+                </div>
+            </div>
+            <div class="p-8 border-t bg-white">
+                <button onclick="copyText()" class="w-full py-4 bg-gradient-to-r from-indigo-600 to-violet-600 text-white rounded-2xl font-bold hover:shadow-lg hover:shadow-indigo-200 transition-all flex items-center justify-center gap-3">
+                    <i data-lucide="copy" class="w-5 h-5"></i>Copy Prompt
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+                backToTopBtn.classList.add('opacity-100', 'visible', 'translate-y-0');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-4');
+                backToTopBtn.classList.remove('opacity-100', 'visible', 'translate-y-0');
+            }
+        });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        const promptData = {
+            'Experience Organizer': `I am preparing for a resume... (prompt content)`,
+            'Resume Expert': `# Role: Senior Resume Expert... (prompt content)`
+        };
+
+        function switchTab(tab) {
+            const isTemplates = tab === 'templates';
+            document.getElementById('content-templates').classList.toggle('hidden', !isTemplates);
+            document.getElementById('content-websites').classList.toggle('hidden', isTemplates);
+            const btnT = document.getElementById('tab-templates');
+            const btnW = document.getElementById('tab-websites');
+            btnT.className = isTemplates ? 'px-8 py-2.5 rounded-xl font-bold transition-all bg-white text-indigo-600 shadow-sm' : 'px-8 py-2.5 rounded-xl font-bold transition-all text-slate-500 hover:text-slate-700';
+            btnW.className = !isTemplates ? 'px-8 py-2.5 rounded-xl font-bold transition-all bg-white text-indigo-600 shadow-sm' : 'px-8 py-2.5 rounded-xl font-bold transition-all text-slate-500 hover:text-slate-700';
+            lucide.createIcons();
+        }
+
+        function switchPodcastTab(tab) {
+            const isXiaoyuzhou = tab === 'xiaoyuzhou';
+            document.getElementById('content-xiaoyuzhou').classList.toggle('hidden', !isXiaoyuzhou);
+            document.getElementById('content-youtube').classList.toggle('hidden', isXiaoyuzhou);
+            const btnX = document.getElementById('tab-xiaoyuzhou');
+            const btnY = document.getElementById('tab-youtube');
+            btnX.className = isXiaoyuzhou ? 'px-8 py-2.5 rounded-xl font-bold transition-all bg-white text-indigo-600 shadow-sm' : 'px-8 py-2.5 rounded-xl font-bold transition-all text-slate-500 hover:text-slate-700';
+            btnY.className = !isXiaoyuzhou ? 'px-8 py-2.5 rounded-xl font-bold transition-all bg-white text-indigo-600 shadow-sm' : 'px-8 py-2.5 rounded-xl font-bold transition-all text-slate-500 hover:text-slate-700';
+            lucide.createIcons();
+        }
+
+        function openModal(title) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-text').innerText = promptData[title] || "Coming soon...";
+            document.getElementById('modal').classList.remove('hidden');
+            document.getElementById('modal-body').scrollTop = 0;
+            setTimeout(() => {
+                document.getElementById('modal-content').classList.remove('scale-95');
+                document.getElementById('modal-content').classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            document.getElementById('modal-content').classList.add('scale-95');
+            setTimeout(() => { document.getElementById('modal').classList.add('hidden'); }, 200);
+        }
+
+        function copyText() {
+            const text = document.getElementById('modal-text').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.currentTarget;
+                const old = btn.innerHTML;
+                btn.innerHTML = '<i data-lucide="check" class="w-5 h-5"></i> Copied';
+                lucide.createIcons();
+                setTimeout(() => { btn.innerHTML = old; lucide.createIcons(); }, 2000);
+            });
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
