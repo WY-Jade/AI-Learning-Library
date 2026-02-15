@@ -115,13 +115,45 @@
             </div>
 
             <div id="content-websites" class="grid grid-cols-1 md:grid-cols-3 gap-8 hidden">
-                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+               
+
+<div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">PromptHero</h3>
+                        <p class="text-slate-500 text-sm mb-8 leading-relaxed">The #1 website for prompt engineering.</p>
+                    </div>
+                    <a href="https://prompthero.com/" target="_blank" class="w-full py-3 bg-slate-900 text-white rounded-xl flex items-center justify-center gap-2 font-bold hover:bg-indigo-600 transition-all text-sm">Visit Site <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                </div>
+
+
+
+ <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                     <div>
                         <h3 class="text-xl font-bold mb-3">Design Prompts</h3>
                         <p class="text-slate-500 text-sm mb-8 leading-relaxed">Web design style optimization, inspiring visual creation.</p>
                     </div>
                     <a href="https://www.designprompts.dev/" target="_blank" class="w-full py-3 bg-slate-900 text-white rounded-xl flex items-center justify-center gap-2 font-bold hover:bg-indigo-600 transition-all text-sm">Visit Site <i data-lucide="external-link" class="w-4 h-4"></i></a>
                 </div>
+
+<div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">PromptPort</h3>
+                        <p class="text-slate-500 text-sm mb-8 leading-relaxed">5,000+ curated prompts for text, visuals, and video.</p>
+                    </div>
+                    <a href="https://app.promptport.ai/" target="_blank" class="w-full py-3 bg-slate-900 text-white rounded-xl flex items-center justify-center gap-2 font-bold hover:bg-indigo-600 transition-all text-sm">Visit Site <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                </div>
+
+<div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">PromptBase</h3>
+                        <p class="text-slate-500 text-sm mb-8 leading-relaxed">Access 240k high-quality AI prompts.</p>
+                    </div>
+                    <a href="https://promptbase.com/?srsltid=AfmBOortmen1QqW4isLAlmew17AVMrfPHaBu69nfPEp41wNZzkAZL46y" target="_blank" class="w-full py-3 bg-slate-900 text-white rounded-xl flex items-center justify-center gap-2 font-bold hover:bg-indigo-600 transition-all text-sm">Visit Site <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                </div>
+
+
+
+
             </div>
         </section>
 
@@ -266,8 +298,111 @@
         });
 
         const promptData = {
-            'Experience Organizer': `I am preparing for a resume... (prompt content)`,
-            'Resume Expert': `# Role: Senior Resume Expert... (prompt content)`
+            'Experience Organizer': `
+我正在为撰写简历做准备。在正式动笔前，我希望以高度结构化、详尽且逻辑清晰的方式，系统梳理我的上一段工作经历。请你基于我提供的项目或工作描述，按照以下结构框架进行深度整理与提炼。请确保内容真实、具体、有层次，突出个人贡献与专业成长，避免空泛表述或夸大其词。
+
+请按以下8个维度组织输出：
+
+1. **项目参与方**
+   - 列出项目涉及的核心团队、部门或外部合作方。
+   - 简要说明各方在项目中的角色与职责（如：产品团队负责需求定义，技术团队负责架构实现等）。
+
+2. **背景与目标**
+   - 简明扼要地描述项目启动的背景（如业务痛点、市场变化、战略调整等）。
+   - 若不同参与方有差异化目标，请分别说明（例如：客户关注交付周期，公司关注利润率）。
+
+3. **实现路径**
+   - 概述为达成目标所采取的关键策略、方法论或执行路线。
+   - 可包括阶段划分、关键技术选型、流程设计、资源调配等核心举措。
+
+4. **个人角色**
+   - 明确我在项目中的具体角色（如项目经理、核心开发、产品负责人等）。
+   - 若承担多个角色，请分点说明，每个角色下简述职责范围。
+
+5. **遇到的问题及应对策略**
+   - 针对每个角色，列出实际遇到的关键挑战或障碍（技术、协作、资源、时间等）。
+   - 重点描述我采取的具体行动、决策逻辑及最终结果，突出个人主动性与解决问题的能力。
+   - 请基于事实，不捏造、不夸大，但可深度挖掘我可能忽略的价值点。
+
+6. **对解决方式的反思**
+   - 分析哪些做法是有效的（做对了什么）——可包括沟通方式、技术方案、风险管理等。
+   - 哪些方面存在改进空间（如：早期预警机制、跨团队对齐频率、文档沉淀等）。
+
+7. **沉淀的专业能力**
+   - 提炼该项目中我所积累的、可迁移、可复用的专业能力（如：复杂需求拆解能力、跨职能协作推动力、数据驱动决策能力等）。
+   - 每项能力请附带简要说明，体现其应用场景与价值。
+
+8. **项目与行业洞察**
+   - 基于项目经验，结合行业趋势，由 AI 适度拓展分析：
+   - 这个项目反映出的行业共性问题或发展方向；
+   - 未来类似项目可借鉴的模式或需警惕的风险点。
+
+#### 要求：
+- 使用 STAR 思路（情境、任务、行动、结果）组织“遇到的问题/解决方案”部分；
+- 优先量化结果并突出呈现（% / 数值 / 时间缩短 / 成本下降 / 产能提升）；
+- 若信息不足，用“（未提供）”或用括号注记“（推断）”；
+- 不要使用第一人称“我”多次，简历条目可用主动动词或“负责/主导/推动”等表述；
+- 使用中文，语言简洁清晰。
+
+#### 限制与注意：
+- 严禁杜撰 KPI 或业绩数字；
+- 若需要对外部背景做补充，可用两句以内的短括注，并标注“（扩充/推断）”。
+
+`,
+            'Resume Expert': `
+# 角色定义
+你是一位资深的简历优化专家，拥有10年以上人力资源（HR）和猎头经验。你精通ATS（求职者跟踪系统）筛选逻辑，擅长通过精准的关键词匹配和专业的措辞，将普通的工作描述转化为高竞争力的职业履历。
+
+# 核心任务
+请根据我提供的「工作经历描述」和目标岗位的「职位描述（JD）」，生成一份符合传统招聘规范、排版清晰、重点突出的专业简历。
+
+# 处理流程与要求
+
+## 第一阶段：分析与匹配
+1. **解析JD**：提取岗位的核心关键词，包括硬技能（工具/技术）、软技能（管理/沟通）、行业术语及业绩指标。
+2. **筛选经历**：仅保留与目标JD相关性最高的3-4段核心项目或工作成就，剔除无关的日常琐事。
+
+## 第二阶段：内容重构（关键）
+1. **个人总结**：
+   - 置于简历顶部，用3行以内文字概括我的核心价值。
+   - 必须包含：行业年限、核心专长、关键成就及职业定位。
+2. **经历描述法则**：
+   - **动词升级**：严禁使用“负责”、“参与”等弱动词，强制替换为“主导”、“策划”、“重构”、“优化”、“实现”等高权重动作词。
+   - **STAR法则**：每一点描述需隐含情境（S）、任务（T）、行动（A）、结果（R）的逻辑，但无需显式写出标签。
+   - **量化优先**：所有成果必须数字化（如：提升30%、节省20万、覆盖10W+用户）。若原始数据缺失，可基于行业常识进行合理估算，并标注（估算）。
+   - **关键词植入**：确保描述中自然融入JD中的关键词，以通过ATS系统筛选。
+
+## 第三阶段：格式与排版规范
+请严格遵循以下排版结构输出，确保视觉上符合传统简历的阅读习惯：
+
+### 基础信息
+- 姓名 | 电话 | 邮箱 | 所在地 | 求职意向
+
+### 个人总结
+[此处填写3行以内的核心优势摘要]
+
+### 工作经历
+**（注意：请按时间倒序排列，最近的经历在最上面）**
+
+**[公司名称]** —— [职位名称]
+*[起止时间：YYYY.MM - YYYY.MM]*
+
+**[项目/职责名称]**
+- **[4-5字小标题]**：[具体描述，结合STAR法则，突出动作与量化结果]
+- **[4-5字小标题]**：[具体描述，结合STAR法则，突出动作与量化结果]
+- **[4-5字小标题]**：[具体描述，结合STAR法则，突出动作与量化结果]
+
+### 专业技能
+- **硬技能**：[如：Python, SQL, Tableau, React]
+- **软技能**：[如：跨部门协作，项目管理，团队激励]
+
+# 输出约束
+1. **真实性**：绝不编造不存在的技能或公司，所有数据需基于我提供的素材或合理推断。
+2. **简洁性**：严格控制内容长度，确保打印后不超过2页A4纸。
+3. **格式**：使用Markdown语法，保持层级清晰。关键信息（如公司名、职位、数据）使用加粗或斜体强调。
+4. **语言**：中文输出，语气专业、客观、自信。
+5. **小标题限制**：项目下的小标题必须严格控制在4到5个字之间，精准概括该点的核心动作或成果。
+`
         };
 
         function switchTab(tab) {
